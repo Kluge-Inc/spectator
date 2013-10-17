@@ -1,7 +1,5 @@
 <%@ page import="org.kluge.spectator.CategoryEntity" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: categoryEntityInstance, field: 'name', 'error')} required">
 	<label for="name">
 		<g:message code="categoryEntity.name.label" default="Name" />

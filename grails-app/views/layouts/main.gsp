@@ -18,7 +18,11 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+        <ul>
+            <li class="controller"><a href="/gr-spectator/categoryEntity/index">Категории</a></li>
+            <li class="controller"><a href="/gr-spectator/document/index">Документы</a></li>
+            <li class="controller"><a href="/gr-spectator/version/index">Версии</a></li>
+        </ul>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

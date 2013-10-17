@@ -4,16 +4,16 @@
 
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'activeVersion', 'error')} ">
     <label for="activeVersion">
-        <g:message code="document.activeVersion.label" default="Active Version"/>
+        <g:message code="document.activeVersion.label" default="Текущая версия"/>
 
     </label>
-    <g:select id="activeVersion" name="activeVersion.id" from="${org.klug.spectator.Version.list()}" optionKey="id"
+    <g:select id="activeVersion" name="activeVersion.id" from="${org.kluge.spectator.Version.list()}" optionKey="id"
               value="${documentInstance?.activeVersion?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'name', 'error')} required">
     <label for="name">
-        <g:message code="document.name.label" default="Name"/>
+        <g:message code="document.name.label" default="Название"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="name" required="" value="${documentInstance?.name}"/>
@@ -21,16 +21,16 @@
 
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'category', 'error')} required">
     <label for="category">
-        <g:message code="document.category.label" default="Category"/>
+        <g:message code="document.category.label" default="Категория"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:select id="category" name="category.id" from="${org.klug.spectator.CategoryEntity.list()}" optionKey="id"
-              required="" value="${documentInstance?.category?.id}" class="many-to-one"/>
+    <g:select id="category" name="category.id" from="${org.kluge.spectator.CategoryEntity.list()}" optionKey="id"
+              optionValue="name" required="" value="${documentInstance?.category?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: documentInstance, field: 'versions', 'error')} ">
     <label for="versions">
-        <g:message code="document.versions.label" default="Versions"/>
+        <g:message code="document.versions.label" default="Версии документа"/>
 
     </label>
 
@@ -40,7 +40,7 @@
         </g:each>
         <li class="add">
             <g:link controller="version" action="create"
-                    params="['document.id': documentInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'version.label', default: 'Version')])}</g:link>
+                    params="['document.id': documentInstance?.id]">добавить версию</g:link>
         </li>
     </ul>
 

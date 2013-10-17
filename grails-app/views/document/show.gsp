@@ -8,20 +8,15 @@
 </head>
 
 <body>
-<a href="#show-document" class="skip" tabindex="-1"><g:message code="default.link.skip.label"
-                                                               default="Skip to content&hellip;"/></a>
 
 <div class="nav" role="navigation">
     <ul>
-        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-        <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>
-        <li><g:link class="create" action="create"><g:message code="default.new.label"
-                                                              args="[entityName]"/></g:link></li>
+        <li><g:link class="create" action="create">Добавить документ</g:link></li>
     </ul>
 </div>
 
 <div id="show-document" class="content scaffold-show" role="main">
-    <h1><g:message code="default.show.label" args="[entityName]"/></h1>
+    <h1>Просмотр документа</h1>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
@@ -42,7 +37,7 @@
         <g:if test="${documentInstance?.name}">
             <li class="fieldcontain">
                 <span id="name-label" class="property-label"><g:message code="document.name.label"
-                                                                        default="Name"/></span>
+                                                                        default="Наименование:"/></span>
 
                 <span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${documentInstance}"
                                                                                         field="name"/></span>
@@ -53,11 +48,11 @@
         <g:if test="${documentInstance?.category}">
             <li class="fieldcontain">
                 <span id="category-label" class="property-label"><g:message code="document.category.label"
-                                                                            default="Category"/></span>
+                                                                            default="Категория:"/></span>
 
                 <span class="property-value" aria-labelledby="category-label"><g:link controller="categoryEntity"
                                                                                       action="show"
-                                                                                      id="${documentInstance?.category?.id}">${documentInstance?.category?.encodeAsHTML()}</g:link></span>
+                                                                                      id="${documentInstance?.category?.id}">${documentInstance?.category?.name}</g:link></span>
 
             </li>
         </g:if>
@@ -65,12 +60,12 @@
         <g:if test="${documentInstance?.versions}">
             <li class="fieldcontain">
                 <span id="versions-label" class="property-label"><g:message code="document.versions.label"
-                                                                            default="Versions"/></span>
+                                                                            default="Версии документа"/></span>
 
                 <g:each in="${documentInstance.versions}" var="v">
                     <span class="property-value" aria-labelledby="versions-label"><g:link controller="version"
                                                                                           action="show"
-                                                                                          id="${v.id}">${v?.encodeAsHTML()}</g:link></span>
+                                                                                          id="${v.name}">${v?.encodeAsHTML()}</g:link></span>
                 </g:each>
 
             </li>
@@ -80,7 +75,7 @@
     <g:form url="[resource: documentInstance, action: 'delete']" method="DELETE">
         <fieldset class="buttons">
             <g:link class="edit" action="edit" resource="${documentInstance}"><g:message
-                    code="default.button.edit.label" default="Edit"/></g:link>
+                    code="default.button.edit.label" default="Редактировать"/></g:link>
             <g:actionSubmit class="delete" action="delete"
                             value="${message(code: 'default.button.delete.label', default: 'Delete')}"
                             onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"/>
