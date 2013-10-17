@@ -1,4 +1,4 @@
-<%@ page import="org.klug.spectator.Version" %>
+<%@ page import="org.kluge.spectator.Version" %>
 
 
 

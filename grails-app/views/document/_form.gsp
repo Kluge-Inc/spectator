@@ -1,4 +1,4 @@
-<%@ page import="org.klug.spectator.Document" %>
+<%@ page import="org.kluge.spectator.Document" %>
 
 
 

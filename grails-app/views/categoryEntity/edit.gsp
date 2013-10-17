@@ -1,4 +1,4 @@
-<%@ page import="org.klug.spectator.CategoryEntity" %>
+<%@ page import="org.kluge.spectator.CategoryEntity" %>
 <!DOCTYPE html>
 <html>
 	<head>
