@@ -89,6 +89,10 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.42/tomcat-embed-jasper-7.0.42.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.42/tomcat-catalina-ant-7.0.42.jar!/" />
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/retry/spring-retry/1.0.0.RELEASE/spring-retry-1.0.0.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/2.8.4/amqp-client-2.8.4.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/1.1.3.RELEASE/spring-amqp-1.1.3.RELEASE.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/1.1.3.RELEASE/spring-rabbit-1.1.3.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

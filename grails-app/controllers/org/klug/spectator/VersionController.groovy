@@ -38,6 +38,8 @@ class VersionController {
         versionInstance.document.activeVersion = versionInstance
         versionInstance.save flush: true
 
+        rabbitSend 'notifier', null, 'version created'
+
         request.withFormat {
             form {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'versionInstance.label', default: 'Version'), versionInstance.id])

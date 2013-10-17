@@ -113,3 +113,14 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+rabbitmq {
+    connectionfactory {
+        username = 'guest'
+        password = 'guest'
+        hostname = '192.168.9.118'
+    }
+    queues = {
+        exchange name: 'notifier', type: fanout
+    }
+}

@@ -36,6 +36,8 @@ class CategoryEntityController {
         }
 
         categoryEntityInstance.save flush:true
+        rabbitSend 'notifier', null, 'category created'
+
 
         request.withFormat {
             form {

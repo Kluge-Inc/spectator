@@ -36,6 +36,8 @@ class DocumentController {
         }
 
         documentInstance.save flush: true
+        rabbitSend 'notifier', null, 'document created'
+
 
         request.withFormat {
             form {
