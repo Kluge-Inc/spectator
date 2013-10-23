@@ -11,7 +11,7 @@
 
 
 <div id="edit-document" class="content scaffold-edit" role="main">
-    <h1>Редактировать документ</h1>
+    <h2>Редактировать документ</h2>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>

@@ -14,24 +14,24 @@
 			</ul>
 		</div>
 		<div id="list-categoryEntity" class="content scaffold-list" role="main">
-			<h1>Список категорий</h1>
+			<h2>Список категорий</h2>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<table>
 			<thead>
 					<tr>
-					
+
 						<g:sortableColumn property="name" title="${message(code: 'categoryEntity.name.label', default: 'Наименование')}" />
-					
+
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${categoryEntityInstanceList}" status="i" var="categoryEntityInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${categoryEntityInstance.id}">${fieldValue(bean: categoryEntityInstance, field: "name")}</g:link></td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

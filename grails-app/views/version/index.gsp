@@ -15,7 +15,7 @@
 			</ul>
 		</div>
 		<div id="list-version" class="content scaffold-list" role="main">
-			<h1>Список версий всех документов</h1>
+			<h2>Список версий всех документов</h2>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>

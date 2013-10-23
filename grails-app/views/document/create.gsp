@@ -9,7 +9,7 @@
 <body>
 
 <div id="create-document" class="content scaffold-create" role="main">
-    <h1>Добавление документа</h1>
+    <h2>Добавление документа</h2>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>

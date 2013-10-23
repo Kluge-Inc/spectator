@@ -16,7 +16,7 @@
 </div>
 
 <div id="show-document" class="content scaffold-show" role="main">
-    <h1>Просмотр документа</h1>
+    <h2>Просмотр документа</h2>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>

@@ -8,7 +8,7 @@
 	<body>
 
 		<div id="create-version" class="content scaffold-create" role="main">
-			<h1>Добавление версии документа</h1>
+			<h2>Добавление версии документа</h2>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

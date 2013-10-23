@@ -8,7 +8,7 @@
 	<body>
 
 		<div id="create-categoryEntity" class="content scaffold-create" role="main">
-			<h1>Добавление категории</h1>
+			<h2>Добавление категории</h2>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

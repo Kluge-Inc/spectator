@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div id="show-categoryEntity" class="content scaffold-show" role="main">
-			<h1>Просмотр категории</h1>
+			<h2>Просмотр категории</h2>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
